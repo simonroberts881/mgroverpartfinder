@@ -16,25 +16,25 @@
     "*.{js,vue}": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/recaptcha": "^0.6.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.13.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/eslint-module": "^1.2.0",
+    "@nuxtjs/tailwindcss": "^1.4.1",
     "@tailwindcss/custom-forms": "^0.2.1",
-    "@vue/test-utils": "^1.0.0-beta.27",
-    "babel-eslint": "^10.0.1",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^24.1.0",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "husky": "^4.0.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "husky": "^4.2.5",
     "jest": "^24.9.0",
-    "lint-staged": "^10.0.0",
-    "typescript": "^3.7.5",
-    "vue-jest": "^4.0.0-0"
+    "lint-staged": "^10.2.11",
+    "typescript": "^3.9.5",
+    "vue-jest": "^4.0.0-beta.3"
   }
 }

@@ -1,42 +1,149 @@
 <template>
   <div class="my-6 mx-auto max-w-lg rounded-lg shadow-md bg-white">
     <div class="py-4 flex justify-center">
-      <img src="~assets/xpart_logo.png">
+      <img src="~assets/xpart_logo.png" alt="Xpart logo">
     </div>
     <hr>
-    <div class="pt-3 px-6 pb-6">
-      <h2
-        class="text-red-600 text-center font-bold text-2xl"
-      >
-        ANNOUNCEMENT
+    <div class="pt-4">
+      <h1 class="text-red-600 text-center font-bold text-2xl">
+        Company Announcement
+      </h1>
+      <h2 class="text-red-600 text-center font-bold">
+        WE HAVE MOVED PLEASE NOTE OUR NEW ADDRESS
       </h2>
-      <p class="text-gray-700 text-justify">
-        We are still open for business but due to some dealer closures, response times and access to some parts during the COVID-19 crisis our normal service will be disrupted, we will always keep you informed and up to date with what we can supply during this time.
+      <p class="text-gray-800 text-center font-bold py-4">
+        Unit 14, Erdington Industrial Park,<br>Chester Road, Birmingham, B24 0RD
       </p>
+    </div>
+    <div class="hidden pt-3 px-6 pb-6">
+      <h1 class="text-red-600 text-center font-bold text-2xl">
+        COVID-19 Company Announcement
+      </h1>
+      <h2 class="text-red-600 text-center text-xl">
+        31st March 2020
+      </h2>
+      <p class="text-gray-700 text-justify pt-2">
+        XPart have taken the difficult decision to close until further notice.
+      </p>
+      <p class="text-gray-700 text-justify pt-2">
+        Any parts enquiries will be dealt with on our return.
+      </p>
+      <div class="hidden">
+        <h2
+          class="text-red-600 text-center font-bold text-2xl"
+        >
+          ANNOUNCEMENT
+        </h2>
+        <p class="text-gray-700 text-justify">
+          We are still open for business but due to some dealer closures, response times and access to some parts during the COVID-19 crisis parts availability may be disrupted, we will always keep you informed and up to date with what we can supply during this time.
+        </p>
+      </div>
     </div>
     <hr>
     <div class="p-6 text-gray-700">
       <div v-if="!requestSent">
-        <p>Looking for a MG, Rover or Landrover part? Enter part number and quantity details here.</p>
+        <p>
+          Looking for a MG, Rover or Landrover part? Enter part number and quantity details here.
+        </p>
         <div class="block flex pt-4">
-          <input v-model="parts[0].code" type="text" class="form-input mt-1 block w-full" placeholder="Part Number #1">
-          <input v-model="parts[0].qty" type="number" class="form-input mt-1 ml-2 block w-40" placeholder="Quantity">
+          <label for="partnumber1" class="w-full">
+            <input
+              id="partnumber1"
+              v-model="parts[0].code"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Part Number #1"
+            >
+          </label>
+          <label for="partquantity1">
+            <input
+              id="partquantity1"
+              v-model="parts[0].qty"
+              type="number"
+              class="form-input mt-1 ml-2 block w-40"
+              placeholder="Quantity"
+            >
+          </label>
         </div>
         <div class="block flex pt-1">
-          <input v-model="parts[1].code" type="text" class="form-input mt-1 block w-full" placeholder="Part Number #2">
-          <input v-model="parts[1].qty" type="number" class="form-input mt-1 ml-2 block w-40" placeholder="Quantity">
+          <label for="partnumber2" class="w-full">
+            <input
+              id="partnumber2"
+              v-model="parts[1].code"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Part Number #2"
+            >
+          </label>
+          <label for="partquantity2">
+            <input
+              id="partquantity2"
+              v-model="parts[1].qty"
+              type="number"
+              class="form-input mt-1 ml-2 block w-40"
+              placeholder="Quantity"
+            >
+          </label>
         </div>
         <div class="block flex pt-1">
-          <input v-model="parts[2].code" type="text" class="form-input mt-1 block w-full" placeholder="Part Number #3">
-          <input v-model="parts[2].qty" type="number" class="form-input mt-1 ml-2 block w-40" placeholder="Quantity">
+          <label for="partnumber3" class="w-full">
+            <input
+              id="partnumber3"
+              v-model="parts[2].code"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Part Number #3"
+            >
+          </label>
+          <label for="partquantity3">
+            <input
+              id="partquantity3"
+              v-model="parts[2].qty"
+              type="number"
+              class="form-input mt-1 ml-2 block w-40"
+              placeholder="Quantity"
+            >
+          </label>
         </div>
         <div class="block flex pt-1">
-          <input v-model="parts[3].code" type="text" class="form-input mt-1 block w-full" placeholder="Part Number #4">
-          <input v-model="parts[3].qty" type="number" class="form-input mt-1 ml-2 block w-40" placeholder="Quantity">
+          <label for="partnumber4" class="w-full">
+            <input
+              id="partnumber4"
+              v-model="parts[3].code"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Part Number #4"
+            >
+          </label>
+          <label for="partquantity4">
+            <input
+              id="partquantity4"
+              v-model="parts[3].qty"
+              type="number"
+              class="form-input mt-1 ml-2 block w-40"
+              placeholder="Quantity"
+            >
+          </label>
         </div>
         <div class="block flex pt-1">
-          <input v-model="parts[4].code" type="text" class="form-input mt-1 block w-full" placeholder="Part Number #5">
-          <input v-model="parts[4].qty" type="number" class="form-input mt-1 ml-2 block w-40" placeholder="Quantity">
+          <label for="partnumber5" class="w-full">
+            <input
+              id="partnumber5"
+              v-model="parts[4].code"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Part Number #5"
+            >
+          </label>
+          <label for="partquantity5">
+            <input
+              id="partquantity5"
+              v-model="parts[4].qty"
+              type="number"
+              class="form-input mt-1 ml-2 block w-40"
+              placeholder="Quantity"
+            >
+          </label>
         </div>
         <div class="pt-4 text-gray-600">
           <p>Please input up to 5 parts in the section above. If you have more than five parts to order/enquire about then please email us your requirements directly to <span class="font-semibold text-gray-700">communications@xpart.co.uk</span></p>
@@ -45,11 +152,35 @@
           </div>
         </div>
         <div class="block flex pt-4">
-          <input v-model="contact_name" type="text" class="form-input mt-1 block w-full" placeholder="Contact Name">
-          <input v-model="contact_email" type="email" class="form-input mt-1 ml-2 block w-full" placeholder="Contact Email">
+          <label for="contactname" class="w-full">
+            <input
+              id="contactname"
+              v-model="contact_name"
+              type="text"
+              class="form-input mt-1 block w-full"
+              placeholder="Contact Name"
+            >
+          </label>
+          <label for="contactemail" class="w-full">
+            <input
+              id="contactemail"
+              v-model="contact_email"
+              type="email"
+              class="form-input mt-1 ml-2 block w-full"
+              placeholder="Contact Email"
+            >
+          </label>
         </div>
         <div class="block flex pt-2">
-          <input v-model="chassis_number" type="text" class="form-input block w-full" placeholder="VIN (chassis number) (optional)">
+          <label for="chassisnumber" class="w-full">
+            <input
+              id="chassisnumber"
+              v-model="chassis_number"
+              type="text"
+              class="form-input block w-full"
+              placeholder="VIN (chassis number) (optional)"
+            >
+          </label>
         </div>
         <div v-if="hasErrors">
           <ul>
